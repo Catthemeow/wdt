@@ -1,0 +1,340 @@
+body {
+  color: #333;
+}
+
+#login {
+  display: none;
+  max-width: 393px;
+  height: 99vh;
+  margin: 0 auto;
+  text-align: center;
+}
+#login > form {
+  text-align: center;
+}
+#login > form > label {
+  display: block;
+  margin: 35vh 0 30px;
+  font-weight: 600;
+  font-size: 24px;
+}
+#login > form > input {
+  background: none;
+  border: none;
+  outline: none;
+  display: block;
+  width: 60%;
+  margin: 0 auto 100px;
+  color: #a799ff;
+  font-size: 22px;
+  font-weight: 800;
+  text-align: center;
+  border-bottom: 2px solid #d9d9d9;
+}
+#login > form > button {
+  background: none;
+  border: none;
+  outline: none;
+  width: 60%;
+  padding: 10px 0;
+  color: #fff;
+  font-weight: 800;
+  background-color: #a799ff;
+  border-radius: 20px;
+}
+
+#wrap {
+  display: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 0.8em;
+  line-height: 1.25em;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 16px 0;
+  text-align: center;
+}
+header > .datetime > strong {
+  margin-right: 5px;
+}
+header > h1 {
+  order: 100;
+  margin: 16px 0;
+  font-size: 20px;
+  line-height: 1.5;
+}
+header > .quote {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-top: 24px;
+}
+header > .quote > q {
+  display: block;
+  width: 40%;
+  line-height: 1.3;
+}
+header > .quote > .author {
+  margin-top: 8px;
+  font-size: 0.6em;
+}
+
+main > section {
+  margin-bottom: 16px;
+  padding: 24px 0;
+  border: 2px solid #a799ff;
+  border-radius: 24px;
+}
+main > section.weather {
+  text-align: center;
+}
+main > section.weather > h2 .city {
+  color: #7964ff;
+}
+main > section.weather > article.current > img {
+  width: 122px;
+}
+main > section.weather > article.current > h3 {
+  font-size: 1.2rem;
+}
+main > section.weather > article.forecast {
+  margin-top: 48px;
+}
+main > section.weather > article.forecast > h3 {
+  width: 60%;
+  color: #7964ff;
+  margin: 0 auto 16px;
+  text-align: left;
+}
+main > section.weather > article.forecast > div {
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+  margin: 0 auto;
+}
+main > section.weather > article.forecast > div > p {
+  display: flex;
+  align-items: center;
+}
+main > section.weather > article.forecast > div > p > .frame {
+  display: block;
+  width: 72px;
+  height: 72px;
+  background-position: center center;
+  background-size: cover;
+}
+main > section.weather > article.forecast > div > p > span {
+  line-height: 1.5;
+  text-align: left;
+}
+main > section.Dday {
+  position: relative;
+}
+main > section.Dday > .tit {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 0 20px;
+  border-bottom: 2px solid #d9d9d9;
+}
+main > section.Dday > .tit > h2 {
+  flex: 1 1 0;
+  text-align: center;
+}
+main > section.Dday > .tit > h2 > small {
+  color: #ccc;
+  cursor: pointer;
+}
+main > section.Dday > .tit > h2 > small:hover {
+  text-decoration: underline;
+}
+main > section.Dday > .tit > i {
+  color: #a799ff;
+  font-size: 24px;
+  cursor: pointer;
+}
+main > section.Dday > .tit > i:hover {
+  color: #7b66ff;
+}
+main > section.Dday > .inputBox {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  width: 90%;
+  height: 48px;
+  background-color: #fff;
+  border: 3px solid #ccc;
+  border-bottom-width: 3px;
+  transform: translate(-50%, 0);
+  box-sizing: border-box;
+}
+@media screen and (min-width:768px) {
+  main > section.Dday > .inputBox {
+    height: 58px;
+  }
+}
+main > section.Dday > .inputBox.show {
+  display: block;
+}
+main > section.Dday > .inputBox > form {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #fff;
+}
+main > section.Dday > .inputBox > form.on {
+  display: flex;
+}
+main > section.Dday > .inputBox > form > label {
+  padding: 0 10px;
+}
+main > section.Dday > .inputBox > form > input[type=text] {
+  flex: 1;
+  outline: none;
+}
+main > section.Dday > .inputBox > form > input[type=date] {
+  margin: 0 5px;
+}
+main > section.Dday > .inputBox > form > .insert {
+  padding-right: 10px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+main > section.Dday > .list {
+  overflow: auto;
+  width: 90%;
+  height: 150px;
+  margin: 24px auto 0;
+}
+main > section.Dday > .list > li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+main > section.Dday > .list > li.complete {
+  -webkit-text-decoration: line-through #a799ff;
+          text-decoration: line-through #a799ff;
+}
+main > section.Dday > .list > li:last-child {
+  margin-bottom: 0;
+}
+main > section.Dday > .list > li > i {
+  font-size: 18px;
+  color: #a799ff;
+}
+main > section.Dday > .list > li > i:hover {
+  color: #7b66ff;
+}
+main > section.Dday > .list > li > h3 {
+  padding: 0 10px;
+  color: #a799ff;
+  font-size: 20px;
+}
+main > section.Dday > .list > li > p {
+  flex: 1;
+  font-size: 20px;
+}
+main > section.todo {
+  padding-top: 0;
+}
+main > section.todo > .inputBox {
+  position: relative;
+  width: 90%;
+  height: 48px;
+  margin: 0 auto;
+}
+main > section.todo > .inputBox > form {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 10px 0;
+}
+main > section.todo > .inputBox > form.on {
+  display: flex;
+}
+main > section.todo > .inputBox > form > input {
+  background: none;
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  text-align: center;
+  border-bottom: 2px solid #d9d9d9;
+}
+main > section.todo > .list {
+  overflow: auto;
+  width: 90%;
+  height: 150px;
+  margin: 24px auto 0;
+}
+main > section.todo > .list > li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+main > section.todo > .list > li:last-child {
+  margin-bottom: 0;
+}
+main > section.todo > .list > li > i {
+  color: #a799ff;
+  font-size: 18px;
+}
+main > section.todo > .list > li > i:hover {
+  color: #7b66ff;
+}
+main > section.todo > .list > li > i.del {
+  margin-left: 10px;
+}
+main > section.todo > .list > li > h3 {
+  flex: 1 1 0;
+  padding: 0 10px;
+  font-weight: 500;
+  font-size: 20px;
+}
+main > section.todo > .list > li > h3.complete {
+  -webkit-text-decoration: line-through #a799ff;
+          text-decoration: line-through #a799ff;
+}
+
+footer {
+  line-height: 30px;
+  text-align: center;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 3vw;
+  top: 2vh;
+}
+aside > i {
+  display: block;
+  margin-bottom: 5px;
+}
+aside > i.fa-trash-restore-alt {
+  font-size: 15px;
+}
+aside > i:hover {
+  color: #a799ff;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

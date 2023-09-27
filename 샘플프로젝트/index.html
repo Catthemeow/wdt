@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TODO</title>
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<div id="login">
+			<form autocomplete="off">
+				<label for="username">What’s your name?</label>
+				<input type="text" id="username" value="둘리" autofocus maxlength="5" required />
+				<button>START</button>
+			</form>
+		</div>
+		<div id="wrap">
+			<header>
+				<p class="datetime">
+					<span class="date">2023.07.14</span>
+					<strong class="day">금</strong>
+					<span class="time">(9:13:45 pm)</span>
+				</p>
+				<!-- <h1>Have a good day, <span class="userid">Duly</span>~!</h1> -->
+				<h1>
+					<span class="user">Duly</span>님,<br />
+					오늘도 즐거운 하루 되세요~!
+				</h1>
+				<p class="quote">
+					<span class="author">Hemmingway</span>
+					<span class="sr-only">-</span>
+					<q class="msg">Never go on trips with anyone you do not love.</q>
+				</p>
+			</header>
+			<main>
+				<section class="weather">
+					<h2>
+						<span class="city"><!--서울--></span> Weather
+					</h2>
+					<article class="current">
+						<img src="#" alt="Rain" />
+						<h3><!--Rain / 28º--></h3>
+					</article>
+					<article class="forecast today">
+						<h3>Today</h3>
+						<div>
+							<p>
+								<span
+									class="frame"
+									style="background-image: url(https://openweathermap.org/img/wn/10d@2x.png)"
+								>
+								</span>
+								<span>
+									<span class="when">9시</span>
+									<span class="temp">23</span>º
+								</span>
+							</p>
+							<p>
+								<span
+									class="frame"
+									style="background-image: url(https://openweathermap.org/img/wn/50d@2x.png)"
+								>
+								</span>
+								<span>
+									<span class="when">9시</span>
+									<span class="temp">23</span>º
+								</span>
+							</p>
+						</div>
+					</article>
+					<article class="forecast tomorrow">
+						<h3>Tomorrow</h3>
+						<div>
+							<p>
+								<span
+									class="frame"
+									style="background-image: url(https://openweathermap.org/img/wn/50d@2x.png)"
+								>
+								</span>
+								<span>
+									<span class="when">19시</span>
+									<span class="temp">23</span>º
+								</span>
+							</p>
+							<p>
+								<span
+									class="frame"
+									style="background-image: url(https://openweathermap.org/img/wn/10d@2x.png)"
+								>
+								</span>
+								<span>
+									<span class="when">9시</span>
+									<span class="temp">23</span>º
+								</span>
+							</p>
+						</div>
+					</article>
+				</section>
+				<section class="Dday">
+					<div class="tit">
+						<h2 title="클릭시 전체데이터 삭제됨">
+							D-Day Goal Setting <small>&lt;전체삭제&gt;</small>
+						</h2>
+						<i class="add fas fa-plus-circle"></i>
+					</div>
+					<div class="inputBox">
+						<form name="frmAdd" class="on">
+							<label for="addTit">목표</label>
+							<input
+								type="text"
+								name="addTit"
+								id="addTit"
+								autocomplete="off"
+								placeholder="Enter your goal and press enter"
+							/>
+							<input type="date" name="addDate" />
+							<button class="insert fas fa-check-square"></button>
+						</form>
+						<form name="frmEdit">
+							<label for="editTit">수정</label>
+							<input
+								type="text"
+								name="editTit"
+								id="editTit"
+								autocomplete="off"
+								placeholder="Enter your goal and press enter"
+							/>
+							<input type="date" name="editDate" />
+							<button class="insert fas fa-check-square"></button>
+						</form>
+					</div>
+					<ul class="list">
+						<!--             
+						<li>
+							<i class="fas fa-times-circle"></i>
+							<h3>D-1</h3>
+							<p>투두 프로젝트</p>
+							<i class="fas fa-edit"></i>
+						</li> -->
+					</ul>
+				</section>
+				<section class="todo">
+					<h2 class="sr-only">투두리스트</h2>
+					<div class="inputBox">
+						<form name="frmTodoAdd" class="on">
+							<label class="sr-only" for="addTask">할일</label>
+							<input
+								type="text"
+								name="addTask"
+								id="addTask"
+								autocomplete="off"
+								placeholder="Enter your today's task and press enter"
+							/>
+						</form>
+						<form name="frmTodoEdit">
+							<label class="sr-only" for="editTask">할일</label>
+							<input
+								type="text"
+								name="editTask"
+								id="editTask"
+								autocomplete="off"
+								placeholder="Edit your today's task and press enter"
+							/>
+						</form>
+					</div>
+					<ul class="list">
+						<!-- <li>
+							<i class="insert fas fa-check-square"></i>
+							<h3>투두프로젝트</h3>
+							<i class="fas fa-edit"></i>
+							<i class="del fas fa-times-circle"></i>
+						</li> -->
+					</ul>
+				</section>
+			</main>
+			<footer>
+				<p><small>&copy;Designed by 홍길동</small></p>
+			</footer>
+
+			<aside>
+				<i class="fas fa-images"></i>
+				<i class="expire fas fa-trash-restore-alt"></i>
+			</aside>
+		</div>
+		<script src="./js/initialState.js"></script>
+		<script src="./js/bg.js"></script>
+		<script src="./js/date.js"></script>
+		<script src="./js/quote.js"></script>
+		<script src="./js/welcome.js"></script>
+		<script src="./js/time.js"></script>
+		<script src="./js/weather.js"></script>
+		<script src="./js/Dday.js"></script>
+		<script src="./js/todo.js"></script>
+	</body>
+</html>
